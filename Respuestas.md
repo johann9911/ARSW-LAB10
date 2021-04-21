@@ -25,21 +25,21 @@ El comando npm FibonacciApp.js solo ejecuta la aplicación, sin embargo, para ma
 Debemos crear un Inbound port rula para permitir el tráfico que llega por un puerto determinado, en este caso el 3000
 
 ## Adjunte tabla de tiempos e interprete por qué la función tarda tanto tiempo.
-![tiempos con size B1ls](./img/B1ls)
-![tiempos con size B2ms](./img/B2ms)
+![tiempos con size B1ls](img/B1ls)
+![tiempos con size B2ms](img/B2ms)
 La función tarda tanto tiempo ya que la función tiene un complejidad lineal, por lo tanto a medida que el numero aumenta el tiempo de respuesta de la función es mayor, también como podemos observar el tiempo de respuesta disminuyo drásticamente cuando se le aumento el tamaño (CPUs y ram), y en algunos casos se veía que el tiempo ya no era lineal, ahora bien, depende también de la red al hacer estas pruebas.
 
 ## Adjunte imagenes del consumo de CPU de la VM e interprete por qué la función consume esa cantidad de CPU.
-![Consumo CPU B1ls](./img/CPUB1ls)
-![Consumo CPU B2ms](./img/CPUB2ms)
+![Consumo CPU B1ls](img/CPUB1ls)
+![Consumo CPU B2ms](img/CPUB2ms)
 Como podemos observar cuando tenemos un tamaño B1ls el consumo de CPU es bastante alto después de realizado las pruebas de carga, está casi llega a un 100%, por otro lado, al usar el tamaño B2ms el consumo de CPU mejora bastante, ya que ahora se encuentra entre un 30% y 40% máximo.
 
 
 ## Adjunte la imagen del resumen de la ejecución de Postman. Interprete:
 ### Tiempos de ejecución de cada petición.
 ### Si hubo fallos documéntelos y explique.
-![Postman B1ls](./img/POSB1ls)
-![Postman B2ms](./img/POSB2ms)
+![Postman B1ls](img/POSB1ls)
+![Postman B2ms](img/POSB2ms)
 Al ver el resultado de la ejecución de la carga concurrente, podemos observar que los tiempos difieren uno del otro, sin embargo la cantidad de fallos son muy similares, esto nos da a entender que al hacer un escalamiento horizontal mejoramos los tiempos de respuestas pero no mejoramos su disponibilidad.
 
 ## ¿Cuál es la diferencia entre los tamaños B2ms y B1ls (no solo busque especificaciones de infraestructura)?
@@ -60,5 +60,5 @@ Al parecer al cambiar la infraestructura, es necesario reiniciar el servidor, po
 Si, en los dos, ya que, al aumentar los recursos de la máquina, el consumo de CPU disminuyo y los tiempos de respuesta mejoraron.
 
 ### Aumente la cantidad de ejecuciones paralelas del comando de postman a 4. ¿El comportamiento del sistema es porcentualmente mejor?
-![Postman2](./img/POS2)
+![Postman2](img/POS2)
 No, aumentaron la cantidad de fallos en el servidor, por lo tanto, muchas de estas peticiones no se llevaron a cabo.
